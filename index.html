@@ -1,0 +1,169 @@
+<!-- language: HTML, file: index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Collaboration inquiries for 𝑩𝑴𝑾 𝑴4 𖤐" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>𝑩𝑴𝑾 𝑴4 𖤐 -- Collaboration</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <main class="shell">
+    <header class="head">
+      <h1 class="title">𝑩𝑴𝑾 𝑴4 𖤐</h1>
+      <p class="subtitle">Collaboration Inquiry</p>
+    </header>
+
+    <section class="contact-strip" aria-label="Direct contact">
+      <span class="label">Direct</span>
+      <span class="email" id="emailText">collab@bmwm4.studio</span>
+      <button class="copy-btn" id="copyEmail" type="button" aria-label="Copy email address">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="9" y="9" width="13" height="13" rx="2" />
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+        </svg>
+        <span>Copy</span>
+      </button>
+    </section>
+
+    <form class="form" id="collabForm" novalidate>
+
+      <div class="field">
+        <label for="name">Full Name</label>
+        <div class="control">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+          <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required />
+        </div>
+        <span class="error" data-for="name" role="alert"></span>
+      </div>
+
+      <div class="field">
+        <label for="email">Email Address</label>
+        <div class="control">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="14" rx="2" />
+            <path d="m3 7 9 6 9-6" />
+          </svg>
+          <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+        </div>
+        <span class="error" data-for="email" role="alert"></span>
+      </div>
+
+      <div class="field">
+        <label for="channel">YouTube Channel URL</label>
+        <div class="control">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33Z" />
+            <path d="m9.75 15.02 5.75-3.27-5.75-3.27v6.54Z" />
+          </svg>
+          <input id="channel" name="channel" type="url" placeholder="youtube.com/@yourchannel" autocomplete="url" required />
+        </div>
+        <span class="error" data-for="channel" role="alert"></span>
+      </div>
+
+      <div class="field">
+        <label for="social">Social Media Link <span class="optional">(optional)</span></label>
+        <div class="control">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+          </svg>
+          <input id="social" name="social" type="url" placeholder="instagram.com/you" autocomplete="url" />
+        </div>
+        <span class="error" data-for="social" role="alert"></span>
+      </div>
+
+      <div class="field">
+        <label for="contactMethod">Preferred Contact Method</label>
+        <div class="control">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z" />
+          </svg>
+          <select id="contactMethod" name="contactMethod" required>
+            <option value="" disabled selected>How should we reach you?</option>
+            <option value="Email">Email (same as above)</option>
+            <option value="WhatsApp">WhatsApp</option>
+            <option value="Telegram">Telegram</option>
+            <option value="Instagram">Instagram</option>
+            <option value="Discord">Discord</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <span class="error" data-for="contactMethod" role="alert"></span>
+      </div>
+
+      <div class="field" id="handleField" hidden>
+        <label for="contactHandle">Your Handle / Number</label>
+        <div class="control">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z" />
+          </svg>
+          <input id="contactHandle" name="contactHandle" type="text" placeholder="" autocomplete="off" />
+        </div>
+        <span class="error" data-for="contactHandle" role="alert"></span>
+      </div>
+
+      <div class="field">
+        <label for="type">Collaboration Type</label>
+        <div class="control">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m12 2 9 5-9 5-9-5 9-5Z" />
+            <path d="m3 12 9 5 9-5" />
+            <path d="m3 17 9 5 9-5" />
+          </svg>
+          <select id="type" name="type" required>
+            <option value="" disabled selected>Select a type</option>
+            <option value="Video Feature">Video Feature</option>
+            <option value="Channel Shoutout">Channel Shoutout</option>
+            <option value="Product Review">Product Review</option>
+            <option value="Guest Appearance">Guest Appearance</option>
+            <option value="Sponsorship">Sponsorship</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <span class="error" data-for="type" role="alert"></span>
+      </div>
+
+      <div class="field textarea">
+        <label for="message">Message / Collaboration Details</label>
+        <div class="control">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg>
+          <textarea id="message" name="message" rows="5" maxlength="500" placeholder="What are you proposing?" required></textarea>
+        </div>
+        <span class="counter" id="counter">0 / 500</span>
+        <span class="error" data-for="message" role="alert"></span>
+      </div>
+
+      <div class="actions">
+        <button type="button" class="btn btn-ghost" id="resetBtn">Reset</button>
+        <button type="submit" class="btn btn-primary" id="submitBtn">
+          <span class="btn-label">Send Inquiry</span>
+          <span class="spinner" aria-hidden="true"></span>
+        </button>
+      </div>
+    </form>
+
+    <p class="privacy">
+      Your details are used only to respond to this inquiry and are never sold or shared.
+      Submissions are delivered directly.
+    </p>
+  </main>
+
+  <div class="toasts" id="toasts" aria-live="polite" aria-atomic="false"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
